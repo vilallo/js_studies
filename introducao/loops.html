@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Prompt -> Like an input in python 
+        let number = prompt("digite um número");
+        //Print in the browser screen
+        document.write("Tabuada do " + number + "<br>");
+        document.write(`1 x ${number} = ${1*number}<br>`)
+        document.write(`2 x ${number} = ${2*number}<br>`)
+        document.write(`3 x ${number} = ${3*number}<br>`)
+        document.write(`4 x ${number} = ${4*number}<br>`)
+        document.write(`5 x ${number} = ${5*number}<br>`)
+        document.write(`6 x ${number} = ${6*number}<br>`)
+        document.write(`7 x ${number} = ${7*number}<br>`)
+        document.write(`8 x ${number} = ${8*number}<br>`)
+        document.write(`9 x ${number} = ${9*number}<br>`)
+        document.write(`10 x ${number} = ${10*number}<br>`)
+    //USING WHILE LOOP
+    let index = 0
+    document.write("Same, with while loop <br>");
+    while(index <= 10){
+        document.write(`${index} x ${number} = ${index*number} <br>`)
+        index++
+    }
+
+    document.write("Saiu do loop While <br>")
+
+    //USING A FOR LOOP
+    document.write("Same, with for loop <br>");
+    for(let j = 0; j<=10; j++){
+        document.write(`${j} x ${number} = ${j*number} <br>`)
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions exercises</h1>
+    <button onclick="mostrarTabuada()">Mostrar tabuada</button> <button onclick="limparTabuada()">Limpar tabuada</button>
+    <div >
+    <div id="output"></div>
+
+    <script>
+        /* LESS EFFICIENT WAY
+        const output = document.getElementById("output")
+        function mostrarTabuada(){
+            let number = prompt("Write here a number")
+            //console.log(typeof number) -> Mostrar que os dados sõa str
+            number = parseFloat(number)
+            for(j=0;j<=1000;j++){
+                output.innerHTML += `${number} x ${j} = ${number*j} <br>`
+            }
+        }
+        */
+        const output = document.getElementById("output")
+
+        function mostrarTabuada(){
+            let number = prompt("Write here a number")
+            let msg = ""
+            //console.log(typeof number) -> Mostrar que os dados sõa str
+            number = parseFloat(number)
+            for(j=0;j<=1000;j++){
+                if (i === 10){
+                    break
+                    //Sai do loop, mas executa fora
+                    //return -> sai da função e retorna o valor
+                }
+                msg += `${number} x ${j} = ${number*j} <br>`
+            }
+            output.innerHTML = msg
+        }
+
+        function limparTabuada(){
+            output.innerText = ""
+
+        }
+    </script>
+</body>
+</html>
