@@ -4,7 +4,9 @@ const ages = [20,21,19]
 console.log(nomes[0], ages[0])
 //é uma ligação muito fraca, já que com um erro ou
 //informação errada estragariamos o codigo
+
 //###############
+
 //Creating Objects -> forml language
 const pessoa = new Object()
 // Representado por chaves {}
@@ -30,6 +32,7 @@ const people = {
     idade :"20",
     "email" : "ela@outlook.com"
 }
+//Iterate through the objects
 //Use the FOR IN loop
 for(let prop in people){
     console.log(prop) // -> Name of the attrib
