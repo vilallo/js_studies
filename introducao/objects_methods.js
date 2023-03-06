@@ -27,3 +27,24 @@ produto.teste1()
 um objeto vazio {}
 representa um objeto window(como o prompt e o alert) */
 produto.teste2()
+//######
+// const pessoas = [{},{},{OBJECTS}]
+const pessoas = [
+    {
+        nome : "Daniel", 
+        idade : 20
+    },
+    {
+        nome : "Maria",
+        idade : 21
+    },
+    {
+        nome: "Gui",
+        idade: 70
+    }
+]
+console.log(pessoas[0].nome)
+//Fazer um loop para iterar na classe
+for(i = 0; i<pessoas.length;i++){
+    console.log(`The name of the person of position ${i} is ${pessoas[i].nome} and the age is ${pessoas[i].idade}  `)
+}
