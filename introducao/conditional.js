@@ -79,3 +79,23 @@ switch(diaSemana){
         dia = " -- "
 }
 console.log(`Hoje é ${dia}`)
+
+//While and For
+//Criar uma lista de números aleatórios não repetidos
+function generateRandom(max){
+return (parseInt(Math.random() * max))
+}
+let arr = []
+let i = 0
+while (arr.length <= 20){
+    i++
+    let randomNumber = generateRandom(30)
+    //Function indexOf will search for a number in the list
+    //and return the index, if not exist in the list return -1
+    //Retorna a primeira ocorrência 
+    if(arr.indexOf(randomNumber) <= 0){
+        arr.push(randomNumber)
+    }
+}
+console.log(arr)
+console.log("O loop foi executado " + i + " vezes")
