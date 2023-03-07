@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script src="sum.js"></script>
+
+    <script>
+    //If we put a string we would have a wrong result
+    //So we will display an error if the type is not number
+    //console.log(sum(3,5))
+    //alert(sum(3,7))
+    //document.write(sum(4,2))
+    let soma = ""
+    try{
+        let soma = sum(3,"a")
+    } catch(e){
+        alert("Ocorreu um erro")
+        console.log(e.message)
+    }
+    console.log(soma)
+
+    </script>
+</body>
+</html>
