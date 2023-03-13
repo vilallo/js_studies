@@ -1,13 +1,19 @@
 //IMC = peso / altura ** 2
 //More simple way
 //Cannot receive non numeric datatypes
-function calculateImc(height,weight){
+function calculateImc(height, weight, callback){
     //if(typeof height != "number" || typeof weight != "number")
     if(weight === undefined || height === undefined )
         throw new Error ("Two parameters required")
+    
     let IMC = height / (weight**2)
+    
     if(IMC === NaN){
-        throw new Error ("")
+    throw new Error ("")
+}
+    //CALLBACK FUNCTION
+    if(typeof callback === "function"){
+        return callback(IMC)
     }
     return IMC 
 }
@@ -38,5 +44,8 @@ function classifyImc(imc){
     else{ return "obesidade grau 3"}
 }
 
-let imc = calculateImc(70, 1.70)
-console.log(`${classifyImc(imc)} -> IMC = ${imc}`)
+let imc1 = calculateImc(100, 1.70)
+//Deve ser chamado sem ()
+let imc2 = calculateImc(100, 1.70, classifyImc)
+console.log(imc1)
+console.log(imc2)
